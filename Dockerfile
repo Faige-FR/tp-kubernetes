@@ -1,8 +1,5 @@
 FROM python:slim-bookworm
 
-# ENV APP_PORT=${APP_PORT}
-# ENV MESSAGE=${MESSAGE}
-
 WORKDIR /app
 
 COPY microservice-http/ /app

@@ -1,0 +1,23 @@
+# A MODIFIER
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: motd
+  labels:
+    app: motd
+    app.kubernetes.io/name: motd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: motd
+  template:
+    metadata:
+      labels:
+        app: motd
+    spec:
+      containers:
+      - name: motd
+        image: faige/flask:1.0.0
+        ports:
+        - containerPort: 80
