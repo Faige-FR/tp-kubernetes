@@ -1,9 +1,7 @@
 from flask import Flask, jsonify
-# from dotenv import load_dotenv
 import os
 
 # Variables d'environnement
-# load_dotenv('./.env')
 port = os.getenv('APP_PORT')
 msg = os.getenv('MESSAGE')
 
@@ -20,4 +18,4 @@ def motd():
 
 # Exécution de l'application à l'exécution du fichier
 if __name__ == '__main__':
-    app.run(debug=True, port=port)
+    app.run(debug=True, host='0.0.0.0', port=port)
