@@ -1,7 +1,7 @@
 FROM python:slim-bookworm
 
-ENV APP_PORT=9999
-ENV MESSAGE="testMsg"
+# ENV APP_PORT=${APP_PORT}
+# ENV MESSAGE=${MESSAGE}
 
 WORKDIR /app
 
