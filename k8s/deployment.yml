@@ -4,7 +4,6 @@ metadata:
   name: motd-deployment
   labels:
     app: motd
-    # app.kubernetes.io/name: motd
 spec:
   replicas: 3
   selector:
