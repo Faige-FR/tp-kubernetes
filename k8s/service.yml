@@ -4,11 +4,13 @@ metadata:
   name: motd-service
 spec:
   selector:
-    app.kubernetes.io/name: motd
+    app: motd
+    # app.kubernetes.io/name: motd
   ports:
   - name: motd-port
     protocol: TCP
     port: 80
     targetPort: flask-port
   # type: ClusterIP
-  type: LoadBalancer
+  # type: LoadBalancer
+  type: ClusterIP

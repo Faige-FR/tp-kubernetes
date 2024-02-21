@@ -1,11 +1,10 @@
-# A MODIFIER
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: motd
+  name: motd-deployment
   labels:
     app: motd
-    app.kubernetes.io/name: motd
+    # app.kubernetes.io/name: motd
 spec:
   replicas: 3
   selector:
@@ -21,3 +20,9 @@ spec:
         image: faige/flask:1.0.0
         ports:
         - containerPort: 80
+          name: flask-port
+        env:
+          - name: APP_PORT
+            value: "80"
+          - name: MESSAGE
+            value: "msg"
